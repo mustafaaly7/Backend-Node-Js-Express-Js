@@ -55,6 +55,7 @@ users.push({ fullname, email, id: users.length + 1 })
 
 
 // dynamic get req of get to get dynamic id with param :id
+// dynamic route of the url without it api wont be completed 
 router.get("/:id" , (req,res)=>{
     const singleUser = users.find((data)=>data.id == req.params.id) // means find in users array in line 8 and if they match with the one with in request url params save it to user variable 
     if(!singleUser){
