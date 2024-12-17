@@ -1,9 +1,8 @@
 import express from "express"
 import morgan from "morgan";
-// import userRoutes from "./routes/user.js"
 import mongoose from "mongoose";
 import authRoutes from "./routes/auth.js"
-
+import userRoutes from "./routes/user.js"
 import 'dotenv/config'
 //to import .env files enviroment data on our routes we use dotenv (npm i dotenv) for i.e mongodb uri etc
 
@@ -64,6 +63,8 @@ function middleware(req, res, next) {
 // app.use("/user", userRoutes)
 app.use("/auth", authRoutes)
 
+//user routes
+app.use("/user" , userRoutes )
 
 
 //QUERY 
